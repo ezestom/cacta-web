@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import mobile from "../img/app-mobile.png";
+---
+
+<article class="-z-10 flex justify-center">
+	<Image src={mobile} alt="mobile" alt="mobile-image" class="mobile" />
+</article>
+
+<style>
+	.mobile {
+		max-width: 65%;
+		rotate: 10deg;
+		z-index: -10;
+		animation: rotate-mobile linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 800px;
+	}
+
+	@keyframes rotate-mobile {
+		to {
+			rotate: 0deg;
+			max-width: 50%;
+		}
+	}
+</style>

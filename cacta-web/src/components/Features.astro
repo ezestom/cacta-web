@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+
+import app2 from "../img/app2.png";
+---
+
+<section
+	class="h-full w-[80%] m-auto flex flex-col items-start my-40 gap-10"
+	id="about">
+	<article class="border-l-4 pl-4 max-w-[75ch]">
+		<span class="opacity-60 text-1xl flex items-center gap-1"></span>
+		The all in one Esg Platform
+		<h5 class="text-2xl font-bold text-pretty flex flex-col opacity-80">
+			Focus on what matters:
+			<strong>Taking action</strong>
+			Cacta automates the data capturing process, calculates your full sustainability
+			performance and displays information in user friendly Dashboards.
+		</h5>
+	</article>
+
+	<figure class="">
+		<Image class="rounded-lg border app-image" src={app2} alt="app image" />
+	</figure>
+</section>
+
+<style>
+	article {
+		border-color: #63e;
+	}
+	strong {
+		font-size: 3rem;
+		background: radial-gradient(125% 125% at 50% 10%, #000 00%, #63e 50%);
+		-webkit-background-clip: text;
+		color: transparent;
+		line-height: 4rem;
+	}
+	.app-image {
+		animation: zoomIn linear both;
+
+		animation-timeline: view();
+		animation-range: entry 20% cover 30%;
+
+		will-change: filter;
+		transition: filter 300ms;
+	}
+
+	@keyframes zoomIn {
+		from {
+			opacity: 0.2;
+			scale: 0.8;
+			translate: 0 10%;
+		}
+	}
+</style>

@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+
+import About from "../components/About.astro";
+import HeroImage from "../components/HeroImage.astro";
+import Features from "../components/Features.astro";
+import AppFunctions from "../components/AppFunctions.astro";
+---
+
+<Layout title="Welcome to Cacta Management">
+	<header>
+		<Navbar />
+		<section
+			class="grid grid-cols-2 items-center h-screen pt-40 w-[80%] m-auto">
+			<Hero />
+			<HeroImage />
+		</section>
+	</header>
+</Layout>
+<main class="relative">
+	<About />
+	<Features />
+	<AppFunctions />
+</main>
+
+<style></style>
