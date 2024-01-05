@@ -1,0 +1,52 @@
+<section
+	class="h-full w-[80%] m-auto flex items-start justify-start my-40 gap-10"
+	id="functions">
+	<article class="border-l-4 pl-4 max-w-[75ch]">
+		<span class="opacity-60 text-1xl flex items-center gap-1"></span>
+		The all in one Esg Platform
+		<h5 class="text-2xl font-bold text-pretty flex flex-col opacity-80">
+			Focus on what matters:
+			<strong>What will you measure?</strong>
+		</h5>
+	</article>
+
+	<iframe
+		class="w-full aspect-video rounded-lg"
+		src="https://www.youtube.com/embed/KQ4Qwh-nuow?si=-OkBAOeeMtbDyg9r"
+		title="YouTube video player"
+		frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		allowfullscreen></iframe>
+</section>
+
+<style>
+	article {
+		border-color: #63e;
+	}
+	strong {
+		font-size: 3rem;
+		background: radial-gradient(125% 125% at 50% 10%, #000 00%, #63e 50%);
+		-webkit-background-clip: text;
+		color: transparent;
+		line-height: 4rem;
+	}
+
+	iframe {
+		animation: grow linear both;
+
+		animation-timeline: view();
+		animation-range: entry 20% cover 30%;
+
+		will-change: filter;
+		transition: filter 300ms;
+	}
+
+	@keyframes grow {
+		from {
+			transform: scale(0.9);
+
+			opacity: 0.5;
+			filter: drop-shadow(0 0 0.75rem #63e);
+		}
+	}
+</style>

@@ -1,15 +1,24 @@
 ---
-
+import { Image } from "astro:assets";
+import check from "../icons/check.svg";
 ---
 
 <article>
-	<div class="flex justify-start">
+	<div class="flex justify-start flex-col">
 		<h1 class="text-8xl flex flex-col font-bold mb-40">
-			<strong>Sustainability</strong>
-			<strong class="important-text">Management</strong>
+			<strong class="z-1">Sustainability</strong>
+			<strong class="important-text -z-1">Management</strong>
 			<span class="opacity-60 text-4xl"> for the</span>
 			<span class="opacity-70 text-6xl"> Primary</span>
 			<strong class="text-7xl"> Industry</strong>
+			<p class="text-2xl opacity-70 font-semibold my-5">
+				<Image
+					src={check}
+					class="inline-block w-6"
+					alt="check-icon"
+				/>
+				Measure, understand and disclose your impact
+			</p>
 		</h1>
 	</div>
 </article>

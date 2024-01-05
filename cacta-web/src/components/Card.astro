@@ -5,13 +5,14 @@ interface Props {
 	preTitle?: string;
 	title?: string;
 	description?: string;
+	href?: string;
 }
-const { title, description, image, preTitle } = Astro.props;
+const { title, description, image, preTitle, href } = Astro.props;
 ---
 
 <div class="max-w-sm bg-white border border-gray-200 rounded-lg card">
 	<Image
-		class="rounded-t-[1rem] w-full max-h-[225px] object-cover opacity-85"
+		class="rounded-t-[1rem] w-full max-h-[225px] object-cover opacity-85 image"
 		src={image}
 		alt={`image about ${image}`}
 	/>
@@ -29,7 +30,8 @@ const { title, description, image, preTitle } = Astro.props;
 			{description}
 		</p>
 		<a
-			href="#"
+			href={href}
+			id="read-more"
 			class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
 			Read more
 			<svg
@@ -48,30 +50,48 @@ const { title, description, image, preTitle } = Astro.props;
 	</div>
 </div>
 
+<script>
+	const anchor = document.getElementById("read-more");
+
+	function saveScrollPosition() {
+		const scrollY = window.scrollY || window.pageYOffset;
+		history.pushState({ scrollY }, document.title);
+	}
+
+	function restoreScrollPosition() {
+		const { scrollY } = history.state || { scrollY: 0 };
+		scrollTo(0, scrollY);
+	}
+
+	anchor?.addEventListener("click", () => {
+		saveScrollPosition();
+	});
+
+	// Maneja el evento popstate para restaurar la posición de desplazamiento
+	window.addEventListener("popstate", restoreScrollPosition);
+</script>
+
 <style>
 	.card {
-		transition: box-shadow 0.2s ease-in-out;
 		min-width: 350px;
 		border-radius: 1rem;
+		view-transition-name: card;
 	}
-	.card:nth-child(1) {
-		transform: translate(0, 10em);
-	}
+
 	.card:nth-child(2) {
-		transform: translate(0, -10em);
+		transform: translate(0, -5em);
 	}
-	.card:nth-child(3) {
-		transform: translate(0, 0em);
-	}
+
 	.card:hover {
 		filter: drop-shadow(0 0 0.05rem #63e);
+		cursor: crosshair;
 	}
 	a {
 		background: radial-gradient(125% 125% at 50% 10%, #fff 00%, #63e 100%);
 		color: black;
 	}
 	a:hover {
-		background: radial-gradient(125% 125% at 50% 10%, #63e 00%, #fff 100%);
+		background: #63e;
 		color: #fff;
 	}
 	.card {

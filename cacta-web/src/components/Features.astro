@@ -6,9 +6,8 @@ import app2 from "../img/app2.png";
 
 <section
 	class="h-full w-[80%] m-auto flex flex-col items-start my-40 gap-10"
-	id="about">
+	id="features">
 	<article class="border-l-4 pl-4 max-w-[75ch]">
-		<span class="opacity-60 text-1xl flex items-center gap-1"></span>
 		The all in one Esg Platform
 		<h5 class="text-2xl font-bold text-pretty flex flex-col opacity-80">
 			Focus on what matters:
@@ -34,8 +33,12 @@ import app2 from "../img/app2.png";
 		color: transparent;
 		line-height: 4rem;
 	}
+	figure:hover {
+		filter: drop-shadow(0 0 0.05rem #63e);
+		cursor: crosshair;
+	}
 	.app-image {
-		animation: zoomIn linear both;
+		animation: zoom2 linear both;
 
 		animation-timeline: view();
 		animation-range: entry 20% cover 30%;
@@ -44,10 +47,10 @@ import app2 from "../img/app2.png";
 		transition: filter 300ms;
 	}
 
-	@keyframes zoomIn {
+	@keyframes zoom2 {
 		from {
 			opacity: 0.2;
-			scale: 0.8;
+			scale: 0.9;
 			translate: 0 10%;
 		}
 	}
