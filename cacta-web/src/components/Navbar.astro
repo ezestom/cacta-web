@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { img } from "astro:assets";
 import repeat from "../icons/repeat.svg";
 import bar from "../icons/bar.svg";
 import contact from "../icons/contact.svg";
@@ -26,23 +26,23 @@ import functions from "../icons/functions.svg";
 	id="top">
 	<li class="decoration-none text-1xl font-bold p-2 opacity-50 transition">
 		<a class="link flex items-center justify-center gap-1" href="#top">
-			<Image src={home} alt="home-icon" />Home</a
+			<img src={home.src} alt="home-icon" />Home</a
 		>
 	</li>
 	<li class="decoration-none text-1xl font-bold p-2 opacity-50 transition">
 		<a class="link flex items-center justify-center gap-1" href="#about">
-			<Image src={repeat} alt="info-icon" />About</a
+			<img src={repeat.src} alt="info-icon" />About</a
 		>
 	</li>
 	<li class="decoration-none text-1xl font-bold p-2 opacity-50 transition">
 		<a class="link flex items-center justify-center gap-1" href="#features">
-			<Image src={bar} alt="bars-icon" />
+			<img src={bar.src} alt="bars-icon" />
 			Features</a
 		>
 	</li>
 	<li class="decoration-none text-1xl font-bold p-2 opacity-50 transition">
 		<a class="link flex items-center justify-center gap-1" href="#metrics">
-			<Image src={metric} alt="metrics-icon" />
+			<img src={metric.src} alt="metrics-icon" />
 			Metrics</a
 		>
 	</li>
@@ -50,13 +50,13 @@ import functions from "../icons/functions.svg";
 		<a
 			class="link flex items-center justify-center gap-1"
 			href="#functions">
-			<Image src={functions} alt="metrics-icon" />
+			<img src={functions.src} alt="metrics-icon" />
 			App Functions</a
 		>
 	</li>
 	<li class="decoration-none text-1xl font-bold p-2 opacity-50 transition">
 		<a class="link flex items-center justify-center gap-1" href="#contact">
-			<Image src={contact} alt="contact" />
+			<img src={contact.src} alt="contact" />
 			Contact Us</a
 		>
 	</li>
@@ -76,9 +76,10 @@ import functions from "../icons/functions.svg";
 		animation-range: 0 100px;
 	}
 	li:hover {
-		opacity: 1;
+		transform: translate(0, -0.1rem);
 	}
-	ul > li:active {
+	li:active,
+	a > img:active {
 		color: #63e;
 		opacity: 1;
 	}

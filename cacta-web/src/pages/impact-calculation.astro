@@ -1,5 +1,5 @@
 ---
-import CardZoom from "../components/CardZoom.astro";
+import { CardZoom } from "../components/CardZoom.jsx";
 import Layout from "../layouts/Layout.astro";
 import image2 from "../img/renovable.jpeg";
 ---
@@ -8,7 +8,8 @@ import image2 from "../img/renovable.jpeg";
 
 <section class="w-screen h-screen flex items-start justify-center m-auto">
 	<CardZoom
-		image={image2}
+		client:visible
+		image={image2.src}
 		preTitle="IMPACT CALCULATION"
 		title="Calculate your full impact - LCA Methodology"
 		description="Cacta's propietary engine calculates +10 impacts, including Global Warming, Air quality, eutrophication and more.Cacta's propietary engine calculates +10 impacts, including Global Warming, Air quality, eutrophication and more.Cacta's propietary engine calculates +10 impacts, including Global Warming, Air quality, eutrophication and more.Cacta's propietary engine calculates +10 impacts, including Global Warming, Air quality, eutrophication and more."
