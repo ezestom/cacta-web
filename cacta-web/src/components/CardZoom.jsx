@@ -2,14 +2,14 @@ import "./CardZoom.css";
 
 export function CardZoom({ image, preTitle, title, description }) {
 	return (
-		<div class="w-[50vw] h-auto min-h-[50%] bg-white border border-gray-200 rounded-lg card">
+		<div class=" mx-20  bg-white border border-gray-200 rounded-lg flex-wrap card">
 			<img
-				class="object-cover image w-1/2 min-w-[350px]"
+				class="object-cover image md:w-1/2 w-full min-w-[350px]"
 				src={image}
 				alt={`image about ${image}`}
 			/>
 
-			<div class="p-5 relative w-1/2 h-auto">
+			<div class="p-5 relative w-1/2 h-auto min-w-[400px]">
 				<p class="font-normal text-gray-700">{preTitle}</p>
 
 				<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">

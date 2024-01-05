@@ -1,11 +1,6 @@
 .card {
-	min-width: 350px;
 	border-radius: 1rem;
 	view-transition-name: card;
-}
-
-.card:nth-child(2) {
-	transform: translate(0, -5em);
 }
 
 .card:hover {

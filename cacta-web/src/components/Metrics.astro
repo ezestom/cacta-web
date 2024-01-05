@@ -15,8 +15,11 @@ import Dashborad from "./Dashboard.astro";
 			<strong>Taking action</strong>
 		</h5>
 	</article>
-	<aside class="flex h-auto items-center justify-between flex-wrap gap-5">
+	<aside
+		class="flex h-auto items-center justify-between flex-wrap gap-5"
+		id="aside">
 		<Card
+			id="1"
 			client:visible
 			imagePath={image1.src}
 			altText="Data Collection"
@@ -26,6 +29,7 @@ import Dashborad from "./Dashboard.astro";
 			href="/data-collection"
 		/>
 		<Card
+			id="2"
 			client:visible
 			imagePath={image2.src}
 			altText="Impact Calculation"
@@ -35,6 +39,7 @@ import Dashborad from "./Dashboard.astro";
 			href="/impact-calculation"
 		/>
 		<Card
+			id="3"
 			client:visible
 			imagePath={image3.src}
 			altText="Report and Dashboards"

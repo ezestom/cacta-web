@@ -1,8 +1,18 @@
 import "./Card.css";
 
-export function Card({ imagePath, altText, preTitle, title, description, href}) {
+export function Card({
+	imagePath,
+	altText,
+	preTitle,
+	title,
+	description,
+	href,
+	id,
+}) {
 	return (
-		<div class="max-w-sm bg-white border border-gray-200 rounded-lg card">
+		<div
+			class="max-w-sm bg-white border border-gray-200 rounded-lg card"
+			id={id}>
 			<img
 				src={imagePath}
 				alt={altText}

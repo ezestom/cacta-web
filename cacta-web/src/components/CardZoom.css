@@ -3,15 +3,7 @@
 	border-radius: 1rem;
 	display: flex;
 }
-.card:nth-child(1) {
-	transform: translate(0, 10em);
-}
-.card:nth-child(2) {
-	transform: translate(0, -10em);
-}
-.card:nth-child(3) {
-	transform: translate(0, 0em);
-}
+
 .card:hover {
 	filter: drop-shadow(0 0 0.05rem #63e);
 	cursor: crosshair;
