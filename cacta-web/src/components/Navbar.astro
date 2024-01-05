@@ -6,7 +6,6 @@ import contact from "../icons/contact.svg";
 import metric from "../icons/metric.svg";
 import home from "../icons/home.svg";
 import functions from "../icons/functions.svg";
-import logo from "/public/logo.png";
 ---
 
 <script>
@@ -25,12 +24,6 @@ import logo from "/public/logo.png";
 <ul
 	class="w-full fixed flex items-center justify-evenly m-auto z-10 tracking-tighter"
 	id="top">
-	<li
-		class="decoration-none text-1xl font-bold p-2 absolute -left-2 transition">
-		<span class="link flex items-center justify-center gap-1" href="#top">
-			<Image src={logo} alt="logo-icon" class="logo" /></span
-		>
-	</li>
 	<li class="decoration-none text-1xl font-bold p-2 opacity-50 transition">
 		<a class="link flex items-center justify-center gap-1" href="#top">
 			<Image src={home} alt="home-icon" />Home</a
@@ -89,12 +82,7 @@ import logo from "/public/logo.png";
 		color: #63e;
 		opacity: 1;
 	}
-	.logo {
-		width: 3.5rem;
-		background: radial-gradient(125% 125% at 50% 10%, #fff 00%, #63e 300%);
-		border-radius: 0 0 0.5rem 0;
-		padding: 0.5rem;
-	}
+
 	@keyframes enhance-header {
 		to {
 			background: radial-gradient(

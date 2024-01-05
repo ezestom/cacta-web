@@ -4,19 +4,15 @@ import check from "../icons/check.svg";
 ---
 
 <article>
-	<div class="flex justify-start flex-col">
-		<h1 class="text-8xl flex flex-col font-bold mb-40">
-			<strong class="z-1">Sustainability</strong>
-			<strong class="important-text -z-1">Management</strong>
+	<div class="inline-block">
+		<h1 class="text-8xl flex flex-col font-bold mb-40 w-auto">
+			<strong class="">Sustainability</strong>
+			<span class="important-text">Management</span>
 			<span class="opacity-60 text-4xl"> for the</span>
 			<span class="opacity-70 text-6xl"> Primary</span>
 			<strong class="text-7xl"> Industry</strong>
 			<p class="text-2xl opacity-70 font-semibold my-5">
-				<Image
-					src={check}
-					class="inline-block w-6"
-					alt="check-icon"
-				/>
+				<Image src={check} class="inline-block w-6" alt="check-icon" />
 				Measure, understand and disclose your impact
 			</p>
 		</h1>
@@ -26,14 +22,13 @@ import check from "../icons/check.svg";
 <style>
 	.important-text {
 		background: radial-gradient(125% 125% at 50% 10%, #fff 00%, #63e 100%);
+		width: auto;
+		padding: 1rem;
 		border-radius: 1rem;
-		padding: 0 0.5rem;
 		color: #fff;
-		margin: 0.5rem 0;
 		font-size: 5rem;
-		padding: 0.5rem 0;
-		display: grid;
-		place-items: center;
+		font-weight: 800;
+		z-index: -1;
 	}
 	h1 {
 		line-height: 5rem;
