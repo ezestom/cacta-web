@@ -3,15 +3,14 @@ import { Image } from "astro:assets";
 import mobile from "../img/app-mobile.png";
 ---
 
-<article class="-z-10 flex justify-center">
+<article class="flex justify-center">
 	<Image src={mobile} alt="mobile" alt="mobile-image" class="mobile" />
 </article>
 
 <style>
 	.mobile {
-		max-width: 65%;
+		max-width: 75%;
 		rotate: 10deg;
-		z-index: -10;
 		animation: rotate-mobile linear both;
 		animation-timeline: scroll(root);
 		animation-range: 0 800px;
