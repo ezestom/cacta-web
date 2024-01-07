@@ -217,6 +217,11 @@ import Layout from "../layouts/Layout.astro";
 		.parent > div {
 			grid-area: auto;
 		}
+		.parent > div:hover {
+			cursor: crosshair;
+			transform: none;
+			filter: brightness(1.2);
+		}
 	}
 	hr {
 		height: 2px;
