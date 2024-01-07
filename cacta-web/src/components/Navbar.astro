@@ -8,24 +8,10 @@ import functions from "../icons/functions.svg";
 import info from "../icons/info.svg";
 ---
 
-<script>
-	const scrollSmooth = () => {
-		const links = document.querySelectorAll("link");
-		links.forEach((link) => {
-			link.addEventListener("click", function () {
-				scroll({
-					behavior: "smooth",
-				});
-			});
-		});
-	};
-</script>
-
 <ul
-	class="w-full fixed flex items-center justify-evenly m-auto z-10 tracking-tighter"
-	id="top">
+	class="w-full fixed flex items-center justify-evenly m-auto z-10 tracking-tighter">
 	<li class="decoration-none text-1xl font-bold p-2 opacity-50 transition">
-		<a class="link flex items-center justify-center gap-1" href="#top">
+		<a class="link flex items-center justify-center gap-1" href="#home">
 			<img src={home.src} alt="home-icon" />Home</a
 		>
 	</li>
@@ -99,6 +85,11 @@ import info from "../icons/info.svg";
 				#fff 00%,
 				#63e 300%
 			);
+		}
+	}
+	@media (width < 1200px) {
+		ul {
+			display: none;
 		}
 	}
 </style>

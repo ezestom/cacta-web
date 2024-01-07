@@ -53,6 +53,15 @@ import Dashborad from "./Dashboard.astro";
 </section>
 
 <style>
+	@media (width < 1200px) {
+		section {
+			width: 98%;
+			margin-bottom: 3rem;
+		}
+		aside {
+			justify-content: center;
+		}
+	}
 	strong {
 		font-size: 3rem;
 		background: radial-gradient(125% 125% at 50% 10%, #000 00%, #63e 50%);

@@ -2,7 +2,7 @@ import "./CardZoom.css";
 
 export function CardZoom({ image, preTitle, title, description }) {
 	return (
-		<div class=" mx-20  bg-white border border-gray-200 rounded-lg flex-wrap card">
+		<div class=" mx-40  bg-white border border-gray-200 rounded-lg flex-wrap card">
 			<img
 				class="object-cover image md:w-1/2 w-full min-w-[350px]"
 				src={image}

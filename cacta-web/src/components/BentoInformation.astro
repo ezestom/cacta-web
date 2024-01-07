@@ -172,9 +172,12 @@ import Layout from "../layouts/Layout.astro";
 		border-radius: 1rem;
 		background: hsl(0 0% 0% / 0.03);
 		flex-wrap: wrap;
+		transition: all 0.2s ease-in-out;
 	}
 	.parent > div:hover {
 		cursor: crosshair;
+		transform: scale(1.1);
+		background: hsl(0 0% 0% / 0.1);
 	}
 
 	.div1 {
@@ -200,6 +203,19 @@ import Layout from "../layouts/Layout.astro";
 	}
 	.div8 {
 		grid-area: 5 / 4 / 7 / 7;
+	}
+	@media (width < 1200px) {
+		section {
+			width: 98%;
+			margin-bottom: 3rem;
+		}
+		.parent {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 1rem;
+		}
+		.parent > div {
+			grid-area: auto;
+		}
 	}
 	hr {
 		height: 2px;
