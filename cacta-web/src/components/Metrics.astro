@@ -15,9 +15,7 @@ import Dashborad from "./Dashboard.astro";
 			<strong>Taking action</strong>
 		</h5>
 	</article>
-	<aside
-		class="flex h-auto items-center justify-between flex-wrap gap-5"
-		id="aside">
+	<aside class="flex-wrap" id="aside">
 		<Card
 			id="1"
 			client:visible
@@ -53,13 +51,15 @@ import Dashborad from "./Dashboard.astro";
 </section>
 
 <style>
+	#aside {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1rem;
+	}
 	@media (width < 1200px) {
 		section {
-			width: 98%;
+			width: 96%;
 			margin-bottom: 3rem;
-		}
-		aside {
-			justify-content: center;
 		}
 	}
 	strong {

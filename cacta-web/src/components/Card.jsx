@@ -10,9 +10,7 @@ export function Card({
 	id,
 }) {
 	return (
-		<div
-			class="max-w-sm bg-white border border-gray-200 rounded-lg card"
-			id={id}>
+		<div class=" bg-white border border-gray-200 rounded-lg card" id={id}>
 			<img
 				src={imagePath}
 				alt={altText}

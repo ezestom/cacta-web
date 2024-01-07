@@ -4,10 +4,10 @@
 	align-items: start;
 	gap: 1rem;
 	justify-items: center;
-
+	border-bottom: 1px solid var(--text-1);
 	padding: 1rem 2rem;
 	border-radius: 1rem;
-	background: hsl(0 0% 0% / 0.05);
+	background: hsl(0 0% 0% / 0.09);
 	flex-wrap: wrap;
 }
 hr {

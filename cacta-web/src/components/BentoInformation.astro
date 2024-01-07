@@ -170,14 +170,15 @@ import Layout from "../layouts/Layout.astro";
 		justify-items: center;
 		padding: 1rem 2rem;
 		border-radius: 1rem;
-		background: hsl(0 0% 0% / 0.03);
+		background: hsl(0 0% 0% / 0.09);
 		flex-wrap: wrap;
 		transition: all 0.2s ease-in-out;
+		border-bottom: 1px solid var(--text-1);
 	}
 	.parent > div:hover {
 		cursor: crosshair;
 		transform: scale(1.1);
-		background: hsl(0 0% 0% / 0.1);
+		filter: brightness(1.2);
 	}
 
 	.div1 {
@@ -206,7 +207,7 @@ import Layout from "../layouts/Layout.astro";
 	}
 	@media (width < 1200px) {
 		section {
-			width: 98%;
+			width: 96%;
 			margin-bottom: 3rem;
 		}
 		.parent {

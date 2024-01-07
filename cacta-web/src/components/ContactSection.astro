@@ -7,9 +7,7 @@ import youtube from "../icons/youtube.svg";
 import world from "../icons/world.svg";
 ---
 
-<section
-	class="w-[80%] h-full m-auto flex-col flex items-start my-10"
-	id="contact">
+<section class="w-[80%] h-full m-auto flex-col flex" id="contact">
 	<article class="w-full flex justify-between flex-wrap gap-5">
 		<div class="border-l-4 pl-4 max-w-[75ch]">
 			<span class="opacity-60 text-1xl flex items-center gap-1"></span>
@@ -78,11 +76,12 @@ import world from "../icons/world.svg";
 <style>
 	@media (width < 1200px) {
 		section {
-			width: 98%;
+			width: 96%;
+			margin-bottom: 3rem;
 		}
 		.footer {
 			margin: 0.5rem 0;
-			gap: 2rem;
+			gap: 1rem;
 		}
 	}
 	div {
@@ -97,8 +96,9 @@ import world from "../icons/world.svg";
 		line-height: 4rem;
 	}
 	.footer {
-		background: hsl(0 0% 0% / 0.03);
+		background: hsl(0 0% 0% / 0.09);
 		padding: 1rem;
 		border-radius: 1rem;
+		border-bottom: 1px solid var(--text-1);
 	}
 </style>

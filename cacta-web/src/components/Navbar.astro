@@ -37,7 +37,7 @@ import info from "../icons/info.svg";
 			class="link flex items-center justify-center gap-1"
 			href="#functions">
 			<img src={functions.src} alt="functions-icon" />
-			App Functions</a
+			App</a
 		>
 	</li>
 	<li class="decoration-none text-1xl font-bold p-2 opacity-50 transition">
@@ -89,7 +89,17 @@ import info from "../icons/info.svg";
 	}
 	@media (width < 1200px) {
 		ul {
-			display: none;
+			bottom: 0;
+		}
+		li > a{
+			flex-direction: column;
+			gap: 0;
+			font-size: .75rem;
+			padding: .5rem  0;
+			text-align: center;
+			line-height: normal;
+			align-items: center;
+			justify-content: start;
 		}
 	}
 </style>
