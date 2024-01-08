@@ -58,7 +58,7 @@ import info from "../icons/info.svg";
 
 <style>
 	ul {
-		z-index: 20;
+		z-index: 30;
 		height: 3rem;
 		margin: auto;
 		left: 0;
@@ -91,6 +91,10 @@ import info from "../icons/info.svg";
 	@media (width < 1200px) {
 		ul {
 			bottom: 0;
+			animation: none;
+			background: hsl(261.8, 76.1%, 58.2%, 0.2) !important;
+			backdrop-filter: blur(20px) saturate(180%);
+			-webkit-backdrop-filter: blur(20px) saturate(180%);
 		}
 		li > a {
 			flex-direction: column;
