@@ -7,7 +7,7 @@ import report from "../icons/report.svg";
 
 <article class="article">
 	<div class="body">
-		<div >
+		<div class="w-full grid place-items-center">
 			<Image
 				class="w-16 pb-5 opacity-10"
 				src={repeat}
@@ -15,7 +15,7 @@ import report from "../icons/report.svg";
 			/>
 		</div>
 		<header>
-			<h2>Automated data capturing</h2>
+			<h2 class="w-auto">Automated data capturing</h2>
 		</header>
 		<hr />
 		<p>~ No more manual processes</p>
@@ -24,7 +24,7 @@ import report from "../icons/report.svg";
 	</div>
 
 	<div class="body">
-		<div >
+		<div class="w-full grid place-items-center">
 			<Image
 				class="w-16 pb-5 opacity-10"
 				src={sustentability}
@@ -32,7 +32,7 @@ import report from "../icons/report.svg";
 			/>
 		</div>
 		<header>
-			<h2>Full sustainability management</h2>
+			<h2 class="w-auto">Full sustainability management</h2>
 		</header>
 		<hr />
 		<p>~ Full sustainability calculation</p>
@@ -41,11 +41,11 @@ import report from "../icons/report.svg";
 	</div>
 
 	<div class="body">
-		<div >
+		<div class="w-full grid place-items-center">
 			<Image class="w-16 pb-5 opacity-10" src={report} alt="check" />
 		</div>
 		<header>
-			<h2>Dashboards and Reports</h2>
+			<h2 class="w-auto">Dashboards and Reports</h2>
 		</header>
 		<hr />
 		<p>~ Reports generation</p>
@@ -73,19 +73,18 @@ import report from "../icons/report.svg";
 		flex-wrap: wrap;
 		border-bottom: 1px solid var(--text-1);
 	}
-	.body {
-		min-width: 250px;
-		text-align: start;
-		display: flex;
-		flex-direction: column;
-		align-items: start;
-	}
 
 	header {
 		display: grid;
 		color: var(--text-1);
+		text-wrap: pretty;
 		font-size: 1.5rem;
 		font-weight: bold;
+		width: 100%;
+	}
+	header h2 {
+		margin: 0;
+		width: 100%;
 	}
 
 	hr {
@@ -111,11 +110,12 @@ import report from "../icons/report.svg";
 		line-height: 2rem;
 	}
 
-	h2 {
-		text-wrap: balance;
-	}
-
 	footer {
 		color: var(--text-3);
+	}
+	@media (width < 650px) {
+		.body {
+			width: 100%;
+		}
 	}
 </style>

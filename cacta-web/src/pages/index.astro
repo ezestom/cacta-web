@@ -12,8 +12,7 @@ import ContactSection from "../components/ContactSection.astro";
 ---
 
 <Layout title="Welcome to Cacta Management">
-	<header class="m-0 p-0 w-full">
-		<!-- <MobileNavbar /> -->
+	<header class="m-0 p-0 w-full relative">
 		<Navbar />
 		<section
 			class="grid grid-cols-2 items-center h-full pt-40 w-[80%] m-auto">
@@ -21,18 +20,18 @@ import ContactSection from "../components/ContactSection.astro";
 			<HeroImage />
 		</section>
 	</header>
-</Layout>
-<main class="relative">
-	<About />
-	<Features />
-	<AppFunctions />
-	<Video />
-	<BentoInformation />
-</main>
-<footer>
-	<ContactSection />
-</footer>
 
+	<main class="relative">
+		<About />
+		<Features />
+		<AppFunctions />
+		<Video />
+		<BentoInformation />
+	</main>
+	<footer>
+		<ContactSection />
+	</footer>
+</Layout>
 <style>
 	@media (width < 1200px) {
 		section {
@@ -43,5 +42,8 @@ import ContactSection from "../components/ContactSection.astro";
 			right: 0;
 			padding-top: 5rem;
 		}
+	}
+	html {
+		scroll-behavior: smooth;
 	}
 </style>
