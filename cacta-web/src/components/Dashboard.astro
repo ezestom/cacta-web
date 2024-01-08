@@ -7,8 +7,12 @@ import report from "../icons/report.svg";
 
 <article class="article">
 	<div class="body">
-		<div class="flex justify-center items-center">
-			<Image class="w-16 pb-5 opacity-10" src={repeat} alt="check" />
+		<div >
+			<Image
+				class="w-16 pb-5 opacity-10"
+				src={repeat}
+				alt="repeat-icon"
+			/>
 		</div>
 		<header>
 			<h2>Automated data capturing</h2>
@@ -20,7 +24,7 @@ import report from "../icons/report.svg";
 	</div>
 
 	<div class="body">
-		<div class="flex justify-center items-center">
+		<div >
 			<Image
 				class="w-16 pb-5 opacity-10"
 				src={sustentability}
@@ -37,7 +41,7 @@ import report from "../icons/report.svg";
 	</div>
 
 	<div class="body">
-		<div class="flex justify-center items-center">
+		<div >
 			<Image class="w-16 pb-5 opacity-10" src={report} alt="check" />
 		</div>
 		<header>
@@ -71,6 +75,10 @@ import report from "../icons/report.svg";
 	}
 	.body {
 		min-width: 250px;
+		text-align: start;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
 	}
 
 	header {
