@@ -1,0 +1,29 @@
+p > .span {
+	font-size: 3rem;
+	background: radial-gradient(
+		125% 125% at 50% 10%,
+		#000 00%,
+		hsl(256.65deg 83.78% 63.73%) 50%
+	);
+	background-clip: text;
+	color: transparent;
+	line-height: 4rem;
+}
+
+p > .span {
+	animation: zoom1 linear both;
+
+	animation-timeline: view();
+	animation-range: entry 20% cover 30%;
+
+	will-change: filter;
+	transition: filter 300ms;
+}
+
+@keyframes zoom1 {
+	from {
+		opacity: 0.2;
+		scale: 0.9;
+		translate: 0 10%;
+	}
+}

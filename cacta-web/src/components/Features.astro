@@ -1,7 +1,8 @@
 ---
-import { Image } from "astro:assets";
+// import { Image } from "astro:assets";
 
-import app2 from "../img/app2.png";
+// import app2 from "../img/app2.png";
+import video2 from "../videos/video2.mp4";
 ---
 
 <section
@@ -18,7 +19,13 @@ import app2 from "../img/app2.png";
 	</article>
 
 	<figure class="">
-		<Image class="rounded-lg border app-image" src={app2} alt="app image" />
+		<!-- <Image class="rounded-lg border app-image" src={app2} alt="app image" /> -->
+		<video
+			class="rounded-lg border app-image"
+			src={video2}
+			loop
+			muted
+			autoplay></video>
 	</figure>
 </section>
 

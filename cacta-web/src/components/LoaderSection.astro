@@ -1,0 +1,56 @@
+---
+import { Counter } from "../components/Counter/Counter";
+---
+
+<section>
+	<Counter
+		client:visible
+		initialValue={2345}
+		speed={10000}
+		children="+"
+		text="Clients"
+	/>
+	<Counter
+		client:visible
+		initialValue={25500}
+		speed={10000}
+		children="$"
+		text="Investment"
+	/>
+	<Counter
+		client:visible
+		initialValue={45504}
+		speed={10000}
+		children="$"
+		text="Valued"
+	/>
+</section>
+
+<style>
+	:root {
+		--text-1: #63e;
+		--text-2: hsl(0 0% 0% / 0.7);
+		--text-3: hsl(0 0% 0% / 0.5);
+	}
+
+	section {
+		max-width: 80vw;
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+		gap: 2rem;
+		padding: 4rem 1rem;
+		border-radius: 1rem;
+		background: hsl(0 0% 0% / 0.09);
+		flex-wrap: wrap;
+		border-bottom: 1px solid var(--text-1);
+		margin-top: 5rem;
+	}
+	@media (width < 1000px) {
+		section {
+			padding: 1rem 3rem;
+			max-width: 95vw;
+			margin: 1rem auto 0 auto;
+		}
+	}
+</style>
