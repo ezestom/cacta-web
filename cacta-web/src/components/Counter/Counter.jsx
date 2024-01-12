@@ -30,7 +30,7 @@ export function Counter({ initialValue, speed, children, text }) {
 					{counterValue}
 				</span>
 			</p>
-			<p className="text-4xl flex fle-col justify-center items-center opacity-50 font-bold">
+			<p className="text-3xl flex fle-col justify-center items-center opacity-20 font-extrabold">
 				{text}
 			</p>
 		</div>

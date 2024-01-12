@@ -1,29 +1,47 @@
 ---
+import { Image } from "astro:assets";
 import { Counter } from "../components/Counter/Counter";
+import users from "../icons/users.svg";
+import chart from "../icons/chart.svg";
+import valued from "../icons/valued.svg";
 ---
 
 <section>
-	<Counter
-		client:visible
-		initialValue={2345}
-		speed={20000}
-		children="+"
-		text="Clients"
-	/>
-	<Counter
-		client:visible
-		initialValue={25500}
-		speed={20000}
-		children="$"
-		text="Investment"
-	/>
-	<Counter
-		client:visible
-		initialValue={45504}
-		speed={20000}
-		children="$"
-		text="Valued"
-	/>
+	<div class="flex items-center flex-col">
+		<Image src={users} alt="Clients" class="w-14 opacity-10" height="100" />
+		<Counter
+			client:visible
+			initialValue={2345}
+			speed={20000}
+			children="+"
+			text="Clients"
+		/>
+	</div>
+	<div class="flex items-center flex-col">
+		<Image src={chart} alt="Clients" class="w-16 opacity-10" height="100" />
+		<Counter
+			client:visible
+			initialValue={25500}
+			speed={20000}
+			children="$"
+			text="Investment"
+		/>
+	</div>
+	<div class="flex items-center flex-col">
+		<Image
+			src={valued}
+			alt="Clients"
+			class="w-16 opacity-10"
+			height="100"
+		/>
+		<Counter
+			client:visible
+			initialValue={45504}
+			speed={20000}
+			children="$"
+			text="Valued"
+		/>
+	</div>
 </section>
 
 <style>
@@ -39,7 +57,7 @@ import { Counter } from "../components/Counter/Counter";
 		display: flex;
 		justify-content: space-around;
 		gap: 2rem;
-		padding: 4rem 1rem;
+		padding: 2rem 1rem;
 		border-radius: 1rem;
 		background: hsl(0 0% 0% / 0.09);
 		flex-wrap: wrap;
@@ -51,6 +69,7 @@ import { Counter } from "../components/Counter/Counter";
 			padding: 1rem 3rem;
 			max-width: 95vw;
 			margin: 1rem auto 0 auto;
+			flex-direction: column;
 		}
 	}
 </style>
