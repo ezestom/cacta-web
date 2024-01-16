@@ -1,14 +1,8 @@
 ---
-// import { Image } from "astro:assets";
-
-// import app from "../img/app.png";
-
-import video1 from "../videos/video1.mp4";
+import { BlurVideo } from "../components/BlurVideo/BlurVideo.jsx";
 ---
 
-<section
-	class="h-full w-[80%] m-auto flex flex-col items-start my-40 gap-10"
-	id="about">
+<section class="h-full w-[80%] m-auto flex items-start my-40 gap-10" id="about">
 	<article class="border-l-4 pl-4 max-w-[75ch]">
 		Unique platform
 
@@ -19,14 +13,10 @@ import video1 from "../videos/video1.mp4";
 			metrics.
 		</h5>
 	</article>
-	<figure class="">
+	<figure class="relative">
 		<!-- <Image class="rounded-lg border app-image" src={app} alt="app image" /> -->
-		<video
-			class="rounded-lg border app-image"
-			src={video1}
-			loop
-			muted
-			autoplay></video>
+
+		<BlurVideo client:visible />
 	</figure>
 </section>
 
@@ -38,34 +28,17 @@ import video1 from "../videos/video1.mp4";
 		}
 	}
 	article {
-		border-color: #63e;
+		border-color: var(--border-line);
 	}
 	strong {
 		font-size: 3rem;
-		background: radial-gradient(125% 125% at 50% 10%, #000 00%, #63e 50%);
+		background: radial-gradient(
+			125% 125% at 100% 0%,
+			#5fff50 30%,
+			#076d08 100%
+		);
 		-webkit-background-clip: text;
 		color: transparent;
 		line-height: 4rem;
-	}
-	figure:hover {
-		filter: drop-shadow(0 0 0.05rem #63e);
-		cursor: crosshair;
-	}
-	.app-image {
-		animation: zoom1 linear both;
-
-		animation-timeline: view();
-		animation-range: entry 20% cover 30%;
-
-		will-change: filter;
-		transition: filter 300ms;
-	}
-
-	@keyframes zoom1 {
-		from {
-			opacity: 0.2;
-			scale: 0.9;
-			translate: 0 10%;
-		}
 	}
 </style>

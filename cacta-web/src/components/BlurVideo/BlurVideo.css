@@ -1,0 +1,32 @@
+/* figure:hover {
+			filter: drop-shadow(0 0 0.05rem var(--bg-solid));
+			cursor: crosshair;
+		} */
+.youtube,
+.close-button {
+	transition: all 0.3s ease-in-out;
+   width: 5em;
+}
+.youtube:hover,
+.close-button:hover {
+	transform: scale(1.05) translate(0, -2px);
+}
+.app-video {
+	animation: zoom1 linear both;
+	animation-timeline: view();
+	animation-range: entry 20% cover 30%;
+	will-change: filter;
+	transition: filter 300ms;
+}
+.app-video:hover {
+	filter: drop-shadow(0 0 0.05rem var(--bg-solid));
+	cursor: crosshair;
+}
+
+@keyframes zoom1 {
+	from {
+		opacity: 0.2;
+		scale: 0.9;
+		translate: 0 10%;
+	}
+}

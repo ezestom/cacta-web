@@ -1,5 +1,8 @@
 .card {
 	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	view-transition-name: card;
 }
 
@@ -8,11 +11,15 @@
 	cursor: crosshair;
 }
 .btn {
-	background: radial-gradient(125% 125% at 50% 10%, #fff 00%, #63e 100%);
-	color: black;
+	background: var(--bg-gradient);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1rem;
+	max-width: 160px;
 }
 .btn:hover {
-	background: #63e;
+	background: var(--border-line);
 	color: #fff;
 }
 .card {

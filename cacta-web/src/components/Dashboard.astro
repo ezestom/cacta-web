@@ -54,12 +54,6 @@ import report from "../icons/report.svg";
 	</div>
 </article>
 <style>
-	:root {
-		--text-1: #63e;
-		--text-2: hsl(0 0% 0% / 0.7);
-		--text-3: hsl(0 0% 0% / 0.5);
-	}
-
 	.article {
 		display: flex;
 		align-items: start;
@@ -69,14 +63,16 @@ import report from "../icons/report.svg";
 		margin-top: 5rem;
 		padding: 2rem;
 		border-radius: 1rem;
-		background: hsl(0 0% 0% / 0.09);
+		background: var(--green-50);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid var(--border-line);
 		flex-wrap: wrap;
-		border-bottom: 1px solid var(--text-1);
+		border-bottom: 1px solid var(--border-line);
 	}
 
 	header {
 		display: grid;
-		color: var(--text-1);
+		color: var(--border-line);
 		text-wrap: pretty;
 		font-size: 1.5rem;
 		font-weight: bold;

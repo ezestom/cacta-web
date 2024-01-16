@@ -1,14 +1,14 @@
 ---
-// import { Image } from "astro:assets";
+import { Image } from "astro:assets";
 
-// import app2 from "../img/app2.png";
+import app2 from "../img/app2.png";
 import video2 from "../videos/video2.mp4";
 ---
 
 <section
-	class="h-full w-[80%] m-auto flex flex-col items-start my-40 gap-10"
+	class="h-full w-[80%] m-auto flex flex-row-reverse items-start my-40 gap-10"
 	id="features">
-	<article class="border-l-4 pl-4 max-w-[75ch]">
+	<article class="border-l-4 pl-4 max-w-[50ch]">
 		The all in one Esg Platform
 		<h5 class="text-2xl font-bold text-pretty flex flex-col opacity-80">
 			Focus on what matters:
@@ -19,13 +19,13 @@ import video2 from "../videos/video2.mp4";
 	</article>
 
 	<figure class="">
-		<!-- <Image class="rounded-lg border app-image" src={app2} alt="app image" /> -->
-		<video
+		<Image class="rounded-lg border app-image" src={app2} alt="app image" />
+		<!-- <video
 			class="rounded-lg border app-image"
 			src={video2}
 			loop
 			muted
-			autoplay></video>
+			autoplay></video> -->
 	</figure>
 </section>
 
@@ -37,17 +37,17 @@ import video2 from "../videos/video2.mp4";
 		}
 	}
 	article {
-		border-color: #63e;
+		border-color: var(--border-line);
 	}
 	strong {
 		font-size: 3rem;
-		background: radial-gradient(125% 125% at 50% 10%, #000 00%, #63e 50%);
+		background: var(--bg-gradient);
 		-webkit-background-clip: text;
 		color: transparent;
 		line-height: 4rem;
 	}
 	figure:hover {
-		filter: drop-shadow(0 0 0.05rem #63e);
+		filter: drop-shadow(0 0 0.05rem var(--bg-solid));
 		cursor: crosshair;
 	}
 	.app-image {

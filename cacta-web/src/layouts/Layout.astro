@@ -27,9 +27,23 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="relative">
-		<div
+		<!-- bg violet -->
+		<!-- <div
 			class="fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] background">
+		</div> -->
+
+		<!-- cuadriculado -->
+		<!-- <div
+			class="-z-10 opacity-50 fixed bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
+		</div> -->
+		<div
+			class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
 		</div>
+
+		<!-- <div
+			class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
+		</div> -->
+
 		<slot />
 		<ViewTransitions />
 	</body>
@@ -39,9 +53,31 @@ const { title } = Astro.props;
 	></script>
 </html>
 <style is:global>
+	:root {
+		--green-50: #e9ffe4;
+		--green-100: #ccffc4;
+		--green-200: #9dff90;
+		--green-300: #5fff50;
+		--green-400: #28fe1d;
+		--green-500: #06e500;
+		--green-600: #00b800;
+		--green-700: #008b01;
+		--green-800: #076d08;
+		--green-900: #0b5c0d;
+		--green-950: #003404;
+
+		/* background: radial-gradient(125% 125% at 50% 10%, #fff 00%, #63e 100%); */
+		--bg-gradient: radial-gradient(
+			125% 125% at 100% 0%,
+			#5fff50 30%,
+			#076d08 100%
+		);
+		--border-line: #076d08;
+		--bg-solid: #5fff50;
+	}
 	@media (width < 1200px) {
 		.background {
-			background: hsl(261.8, 76.1%, 58.2%, 0.1) !important;
+			/* background: hsl(261.8, 76.1%, 58.2%, 0.1) !important; */
 			height: 100dvh !important;
 		}
 	}

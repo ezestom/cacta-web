@@ -21,16 +21,14 @@ export function Counter({ initialValue, speed, children, text }) {
 	}, [counterValue, initialValue, speed]);
 
 	return (
-		<div className="font-extrabold">
+		<div className="font-bold">
 			<p>
-				<span
-					className="lg:text-7xl text-5xl value flex items-center justify-center span"
-					akhi={initialValue}>
-					{children}
+				<span className=" value span" akhi={initialValue}>
+					<span> {children}</span>
 					{counterValue}
 				</span>
 			</p>
-			<p className="text-3xl flex fle-col justify-center items-center opacity-20 font-extrabold">
+			<p className="text-2xl flex fle-col justify-center items-center opacity-50 font-bold">
 				{text}
 			</p>
 		</div>

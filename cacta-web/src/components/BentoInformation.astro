@@ -170,15 +170,16 @@ import Layout from "../layouts/Layout.astro";
 		justify-items: center;
 		padding: 1rem 2rem;
 		border-radius: 1rem;
-		background: hsl(0 0% 0% / 0.09);
 		flex-wrap: wrap;
 		transition: all 0.2s ease-in-out;
-		border-bottom: 1px solid var(--text-1);
+		background: var(--green-50);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid var(--border-line);
 	}
 	.parent > div:hover {
 		cursor: crosshair;
-		transform: scale(1.1);
-		filter: brightness(1.2);
+		transform: scale(1.05);
+		background: var(--green-100);
 	}
 
 	.div1 {
@@ -237,12 +238,12 @@ import Layout from "../layouts/Layout.astro";
 	}
 
 	article {
-		border-color: #63e;
+		border-color: var(--border-line);
 		height: auto;
 	}
 	strong {
 		font-size: 3rem;
-		background: radial-gradient(125% 125% at 50% 10%, #000 00%, #63e 50%);
+		background: var(--bg-gradient);
 		-webkit-background-clip: text;
 		color: transparent;
 		line-height: 4rem;
